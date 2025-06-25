@@ -16,18 +16,18 @@ class ContactInline(admin.TabularInline):
 class UserAdmin(UserAdmin):
     model = User
     inlines = [ContactInline]
+    ordering = ['email',]
 
-    list_display = ('username', 'email', 'is_instructor', 'is_master', 'is_staff', 'is_superuser')
+    list_display = ('email', 'is_instructor', 'is_master', 'is_staff', 'is_superuser')
     list_filter = ('is_active', 'is_master', 'is_staff')
 
     fieldsets = (
-        (None, {'fields': ('username', 'password')}),
+        (None, {'fields': ('password',)}),
         (_("Personal info"), {
             'fields': (
                 'first_name',
                 'last_name',
                 'email',
-                'phone_number',
                 'position',
                 'country',
                 'city',
@@ -44,27 +44,4 @@ class UserAdmin(UserAdmin):
             'user_permissions',
         )}),
         (_("Important dates"), {'fields': ('last_login', 'date_joined')}),
-    )
-
-    add_fieldsets = (
-        (None, {
-            'classes': ('wide',),
-            'fields': (
-                'username',
-                'password1',
-                'password2',
-                'email',
-                'phone_number',
-                'position',
-                'country',
-                'city',
-                'notes',
-                'is_instructor',
-                'is_master',
-                'is_active',
-                'is_staff',
-                'is_superuser',
-                'groups',
-            ),
-        }),
     )

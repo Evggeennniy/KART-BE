@@ -56,6 +56,11 @@ class Product(models.Model):
         null=True,
         verbose_name=_("How to Use")
     )
+    ingredients = models.TextField(
+        blank=True,
+        null=True,
+        verbose_name=_("Ingredients")
+    )
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,

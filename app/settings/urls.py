@@ -24,8 +24,9 @@ from django.conf.urls.i18n import set_language
 urlpatterns = [
     path("i18n/setlang/", set_language, name="set_language"),  # 👈 это нужно Jazzmin
 
-    path('api/auth/', include('users.urls')),
-    path('api/', include('products.urls')),
+    path('api/users/', include('users.urls')),
+    path('api/products/', include('products.urls')),
+    path('api/posts/', include('posts.urls')),
 
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),

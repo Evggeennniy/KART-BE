@@ -17,3 +17,7 @@ class Post(models.Model):
         max_length=200,
         verbose_name=_("Link")
     )
+
+    class Meta:
+        verbose_name = _("Post")
+        verbose_name_plural = _("Posts")

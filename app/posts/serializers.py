@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Post
+from posts.models import Post
 
 
-class PostReadOnlySerializer(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = '__all__'
-        read_only_fields = fields  # всё только для чтения
+        fields = ['preview_image', 'title', 'link']
+        read_only_fields = fields
