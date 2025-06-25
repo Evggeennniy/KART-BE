@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-24 14:12+0300\n"
+"POT-Creation-Date: 2025-06-25 12:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,15 +20,15 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\users\admin.py:11 .\users\models.py:79
+#: .\users\admin.py:11 .\users\models.py:90
 msgid "Contact"
 msgstr "Контакт"
 
-#: .\users\admin.py:12 .\users\models.py:80
+#: .\users\admin.py:12 .\users\models.py:91
 msgid "Contacts"
 msgstr "Контакты"
 
-#: .\users\admin.py:25
+#: .\users\admin.py:26
 msgid "Personal info"
 msgstr "Личные данные"
 
@@ -40,98 +40,100 @@ msgstr "Права"
 msgid "Important dates"
 msgstr "Важные даты"
 
-#: .\users\models.py:8
+#: .\users\models.py:31
+msgid "Email address"
+msgstr "Ел. почта"
+
+#: .\users\models.py:32
 msgid "Position"
 msgstr "Должность"
 
-#: .\users\models.py:11
-msgid "Phone number"
-msgstr "Номер телефона"
-
-#: .\users\models.py:14
+#: .\users\models.py:33
 msgid "Notes"
 msgstr "Заметки"
 
-#: .\users\models.py:17
+#: .\users\models.py:34
 msgid "Country"
 msgstr "Страна"
 
-#: .\users\models.py:20
+#: .\users\models.py:35
 msgid "City"
 msgstr "Город"
 
-#: .\users\models.py:24
+#: .\users\models.py:36
 msgid "Instructor status"
 msgstr "Статус инструктора"
 
-#: .\users\models.py:27
+#: .\users\models.py:37
 msgid "Master status"
 msgstr "Статус мастера"
 
-#: .\users\models.py:30
-msgid "Active"
-msgstr "Активный"
-
-#: .\users\models.py:34 .\users\models.py:57
+#: .\users\models.py:45 .\users\models.py:68
 msgid "User"
 msgstr "Пользователь"
 
-#: .\users\models.py:35
+#: .\users\models.py:46
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\users\models.py:40
+#: .\users\models.py:51
 msgid "Instagram"
 msgstr "Инстаграм"
 
-#: .\users\models.py:41
+#: .\users\models.py:52
 msgid "Facebook"
 msgstr "Фейсбук"
 
-#: .\users\models.py:42
+#: .\users\models.py:53
 msgid "TikTok"
 msgstr "ТикТок"
 
-#: .\users\models.py:43
+#: .\users\models.py:54
 msgid "Telegram"
 msgstr "Телеграм"
 
-#: .\users\models.py:44
+#: .\users\models.py:55
 msgid "WhatsApp"
 msgstr "Ватсап"
 
-#: .\users\models.py:45
+#: .\users\models.py:56
 msgid "Viber"
 msgstr "Вайбер"
 
-#: .\users\models.py:46
+#: .\users\models.py:57
 msgid "LinkedIn"
 msgstr "Линкедин"
 
-#: .\users\models.py:47
+#: .\users\models.py:58
 msgid "YouTube"
 msgstr "Ютуб"
 
-#: .\users\models.py:48
+#: .\users\models.py:59
 msgid "Snapchat"
 msgstr "Снапчат"
 
-#: .\users\models.py:49
+#: .\users\models.py:60
 msgid "Twitter"
 msgstr "Твиттер"
 
-#: .\users\models.py:50
+#: .\users\models.py:61
 msgid "Other"
 msgstr "Другое"
 
-#: .\users\models.py:62
+#: .\users\models.py:73
 msgid "Contact type"
 msgstr "Тип контакта"
 
-#: .\users\models.py:66
+#: .\users\models.py:77
 msgid "Value"
 msgstr "Значение"
 
-#: .\users\models.py:72
+#: .\users\models.py:83
 msgid "Note"
 msgstr "Заметка"
+
+#~ msgid "Phone number"
+#~ msgstr "Номер телефона"
+
+#~ msgid "Active"
+#~ msgstr "Активный"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-24 14:12+0300\n"
+"POT-Creation-Date: 2025-06-25 12:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr "Название"
 msgid "Sticker"
 msgstr "Стикер"
 
-#: .\products\models.py:28 .\products\models.py:72
+#: .\products\models.py:28 .\products\models.py:77
 msgid "Category"
 msgstr "Категория"
 
@@ -53,17 +53,21 @@ msgid "How to Use"
 msgstr "Способ применения"
 
 #: .\products\models.py:62
+msgid "Ingredients"
+msgstr "Ингридиенты"
+
+#: .\products\models.py:67
 msgid "Price"
 msgstr "Цена"
 
-#: .\products\models.py:66
+#: .\products\models.py:71
 msgid "Stock"
 msgstr "Остаток"
 
-#: .\products\models.py:86
+#: .\products\models.py:91
 msgid "Product"
 msgstr "Продукт"
 
-#: .\products\models.py:87
+#: .\products\models.py:92
 msgid "Products"
 msgstr "Продукты"
