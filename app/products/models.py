@@ -76,6 +76,13 @@ class Product(models.Model):
         on_delete=models.CASCADE,
         verbose_name=_("Category")
     )
+    additional_recomendations = models.ManyToManyField(
+        'self',
+        blank=True,
+        symmetrical=False,
+        related_name='recommended_by',
+        verbose_name=_("Additional Recommendations")
+    )
 
     def __str__(self):
         return f"{self.name} ({self.code})"

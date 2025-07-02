@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from posts.models import Post
+from posts.models import BlogPost
 
 
-class PostSerializer(serializers.ModelSerializer):
+class BlogPostSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
+        model = BlogPost
         fields = ['preview_image', 'title', 'link']
         read_only_fields = fields
