@@ -8,6 +8,8 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'link')
     search_fields = ('title',)
 
+    exclude = ('title',)
+
     fieldsets = (
         (None, {
             'fields': ('title', 'link', 'preview_image'),
