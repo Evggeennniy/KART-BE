@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-24 14:12+0300\n"
+"POT-Creation-Date: 2025-07-05 10:37+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,18 +20,61 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\dealers\admin.py:19 .\dealers\models.py:22
+#: .\dealers\admin.py:14
+msgid "Основное"
+msgstr ""
+
+#: .\dealers\admin.py:17
+msgid "Контактные данные"
+msgstr ""
+
+#: .\dealers\admin.py:25 .\dealers\models.py:59
 msgid "Dealer"
 msgstr "Дистрибьютор"
 
-#: .\dealers\admin.py:20 .\dealers\models.py:23
+#: .\dealers\admin.py:26 .\dealers\models.py:60
 msgid "Dealers"
 msgstr "Дистрибьюторы"
 
-#: .\dealers\models.py:10
+#: .\dealers\models.py:8
 msgid "Image"
 msgstr "Изображение"
 
-#: .\dealers\models.py:15
-msgid "Name"
-msgstr "Название"
+#: .\dealers\models.py:13
+msgid "Country"
+msgstr ""
+
+#: .\dealers\models.py:18
+msgid "Company"
+msgstr ""
+
+#: .\dealers\models.py:22
+msgid "Address"
+msgstr ""
+
+#: .\dealers\models.py:27
+msgid "Website"
+msgstr ""
+
+#: .\dealers\models.py:32
+msgid "Email"
+msgstr ""
+
+#: .\dealers\models.py:37
+msgid "WhatsApp"
+msgstr ""
+
+#: .\dealers\models.py:42
+msgid "Viber"
+msgstr ""
+
+#: .\dealers\models.py:47
+msgid "Instagram"
+msgstr ""
+
+#: .\dealers\models.py:52
+msgid "Facebook"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Название"

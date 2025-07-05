@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from dealers.models import Dealer  # Убедись, что импорт правильный
+from dealers.models import Dealer
 
 
 class DealerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dealer
-        fields = ['id', 'image', 'name']
+        fields = "__all__"
