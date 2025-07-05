@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-01 17:53+0300\n"
+"POT-Creation-Date: 2025-07-05 10:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,58 +20,66 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\products\models.py:10 .\products\models.py:43
-msgid "Image"
-msgstr "Изображение"
-
-#: .\products\models.py:15 .\products\models.py:47
+#: .\products\models.py:9 .\products\models.py:41
 msgid "Name"
 msgstr "Название"
 
-#: .\products\models.py:21
+#: .\products\models.py:15
 msgid "Sticker"
 msgstr "Стикер"
 
-#: .\products\models.py:28 .\products\models.py:77
+#: .\products\models.py:22 .\products\models.py:79
 msgid "Category"
 msgstr "Категория"
 
-#: .\products\models.py:29
+#: .\products\models.py:23
 msgid "Categories"
 msgstr "Категории"
 
-#: .\products\models.py:36
+#: .\products\models.py:30
 msgid "Code"
 msgstr "Код"
 
-#: .\products\models.py:52
+#: .\products\models.py:37
+msgid "Image"
+msgstr "Изображение"
+
+#: .\products\models.py:46
 msgid "Description"
 msgstr "Описание"
 
-#: .\products\models.py:57
+#: .\products\models.py:51
 msgid "How to Use"
 msgstr "Способ применения"
 
-#: .\products\models.py:62
+#: .\products\models.py:56
 msgid "Ingredients"
 msgstr "Ингридиенты"
 
-#: .\products\models.py:67
+#: .\products\models.py:61
 msgid "Price"
 msgstr "Цена"
 
-#: .\products\models.py:71
+#: .\products\models.py:65
 msgid "Stock"
 msgstr "Остаток"
 
-#: .\products\models.py:84
+#: .\products\models.py:69
+msgid "New"
+msgstr ""
+
+#: .\products\models.py:73
+msgid "Popular"
+msgstr ""
+
+#: .\products\models.py:86
 msgid "Additional Recommendations"
 msgstr "Дополнительные рекомендации"
 
-#: .\products\models.py:98
+#: .\products\models.py:100
 msgid "Product"
 msgstr "Продукт"
 
-#: .\products\models.py:99
+#: .\products\models.py:101
 msgid "Products"
 msgstr "Продукты"

@@ -2,7 +2,8 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from products.models import Product, Category
 from products.serializers import ProductSerializer, CategorySerializer
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import status, filters
+from rest_framework import filters
+from drf_spectacular.utils import extend_schema, OpenApiParameter
 
 
 class ProductListView(ListAPIView):
@@ -10,13 +11,13 @@ class ProductListView(ListAPIView):
     serializer_class = ProductSerializer
 
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
-    filterset_fields = ['category', 'price', 'stock']
-    ordering_fields = ['price', 'name', 'stock']
-    search_fields = ['name', 'description', 'ingredients', 'how_to_use', 'code']
+    filterset_fields = ['category', 'is_popular']
+    ordering_fields = ['id', 'code', 'price', 'name', 'stock']
+    search_fields = ['id', 'name', 'code']
 
 
 class ProductDetailView(RetrieveAPIView):
-    queryset = Product.objects.select_related('category').all()
+    queryset = Product.objects.select_related('category', 'additional_recomendations').all()
     serializer_class = ProductSerializer
     lookup_field = 'pk'
 

@@ -3,22 +3,10 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Category(models.Model):
-    image = models.ImageField(
-        upload_to='categories/',
-        blank=True,
-        null=True,
-        verbose_name=_("Image")
-    )
     name = models.CharField(
-        max_length=64,
+        max_length=32,
         unique=True,
         verbose_name=_("Name")
-    )
-    sticker = models.CharField(
-        max_length=32,
-        blank=True,
-        null=True,
-        verbose_name=_("Sticker")
     )
 
     def __str__(self):
@@ -69,6 +57,14 @@ class Product(models.Model):
     stock = models.PositiveIntegerField(
         default=0,
         verbose_name=_("Stock")
+    )
+    is_new = models.BooleanField(
+        default=False,
+        verbose_name=_("New")
+    )
+    is_popular = models.BooleanField(
+        default=False,
+        verbose_name=_("Popular")
     )
     category = models.ForeignKey(
         'Category',

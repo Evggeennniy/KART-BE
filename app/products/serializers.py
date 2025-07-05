@@ -5,7 +5,7 @@ from products.models import Product, Category
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['image', 'name', 'sticker']
+        fields = ['name',]
         read_only_fields = fields
 
 
