@@ -43,17 +43,20 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'drf_spectacular_sidecar',
 
+    'modeltranslation',
+
     "users",
     "products",
     "dealers",
     "posts",
-    "forms"
+    "forms",
+    "info"
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'django.middleware.locale.LocaleMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'django.middleware.locale.LocaleMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -118,13 +121,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 TIME_ZONE = "UTC"
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ('en', 'English'),
     ('ru', 'Русский'),
-    # можешь добавить другие ('uk', 'Ukrainian'), ('bg', 'Bulgarian') и т.д.
 ]
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+MODELTRANSLATION_LANGUAGES = ('ru', 'en')
 
 USE_I18N = True
 USE_L10N = True
