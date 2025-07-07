@@ -3,7 +3,6 @@ from products.models import Product, Category
 from products.serializers import ProductSerializer, CategorySerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from drf_spectacular.utils import extend_schema, OpenApiParameter
 
 
 class ProductListView(ListAPIView):

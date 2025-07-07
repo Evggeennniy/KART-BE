@@ -4,7 +4,7 @@ from products.models import Category, Product
 
 @register(Category)
 class CategoryTranslationOptions(TranslationOptions):
-    fields = ('id', 'name')
+    fields = ('name',)
 
 
 @register(Product)
