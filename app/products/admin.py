@@ -8,6 +8,7 @@ from django.utils.translation import get_language
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
+    list_editable = ()
 
     exclude = ('name',)
 
@@ -17,7 +18,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'stock', 'category')
     list_filter = ('category',)
     search_fields = ('name', 'description')
-    list_editable = ('price', 'stock')
+    list_editable = ()
 
     exclude = (
         'name',
