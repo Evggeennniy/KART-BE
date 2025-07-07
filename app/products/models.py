@@ -29,6 +29,10 @@ class Product(models.Model):
         verbose_name=_("Code"),
         editable=False
     )
+    slug = models.SlugField(
+        unique=True,
+        verbose_name=_("Slug")
+    )
     image = models.ImageField(
         upload_to='products/',
         blank=True,

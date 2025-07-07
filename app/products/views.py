@@ -18,7 +18,7 @@ class ProductListView(ListAPIView):
 class ProductDetailView(RetrieveAPIView):
     queryset = Product.objects.select_related('category').prefetch_related('additional_recomendations').all()
     serializer_class = ProductSerializer
-    lookup_field = 'pk'
+    lookup_field = 'slug'
 
 
 class CategoryListView(ListAPIView):

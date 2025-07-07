@@ -3,4 +3,5 @@ migrations/
 venv/
 .env
 
+db.sqlite3
 media/

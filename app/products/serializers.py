@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from products.models import Product, Category
+from drf_spectacular.utils import extend_schema_field
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -36,6 +37,7 @@ class ProductSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = fields
 
+    @extend_schema_field(ProductShortSerializer(many=True))
     def get_additional_recomendations(self, obj):
         qs = obj.additional_recomendations.all()
         if not qs:
