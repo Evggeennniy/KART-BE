@@ -36,8 +36,6 @@ SESSION_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_SECURE = True
 
 
-# Application definition
-
 INSTALLED_APPS = [
     'jazzmin',
     "django.contrib.admin",
@@ -155,6 +153,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = []
 STATIC_ROOT = BASE_DIR / '..' / 'static'
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / '..' / 'static' / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

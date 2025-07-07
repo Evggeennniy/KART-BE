@@ -1,14 +1,12 @@
 from django.contrib import admin
-from modeltranslation.admin import TabbedTranslationAdmin
 from products.models import Category, Product
-from django.utils.translation import get_language
+from django.forms import CharField
 
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
-    search_fields = ('name',)
-    list_editable = ()
+    list_display = ('name', 'slug')
+    search_fields = ('name', 'slug')
 
     exclude = ('name',)
 

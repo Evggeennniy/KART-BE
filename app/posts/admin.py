@@ -4,11 +4,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 @admin.register(BlogPost)
-class PostAdmin(admin.ModelAdmin):
+class BlogPostAdmin(admin.ModelAdmin):
     list_display = ('title', 'link')
     search_fields = ('title',)
 
-    exclude = ('title',)
+    exclude = ()
 
     fieldsets = (
         (None, {

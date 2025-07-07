@@ -18,11 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
-from django.conf.urls.i18n import i18n_patterns
-from django.conf.urls.i18n import set_language
+from django.conf.urls.i18n import i18n_patterns, set_language
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path("i18n/setlang/", set_language, name="set_language"),  # 👈 это нужно Jazzmin
+    path("i18n/setlang/", set_language, name="set_language"),
 
     path('api/users/', include('users.urls')),
     path('api/products/', include('products.urls')),
@@ -34,6 +35,9 @@ urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 urlpatterns += i18n_patterns(
