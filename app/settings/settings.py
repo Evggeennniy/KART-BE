@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-!fo1n!%*t8st89v7+p5j&&(q+w#zaktkyezi1hp=fnnn0#w-s6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -164,3 +164,7 @@ REST_FRAMEWORK = {
 JAZZMIN_SETTINGS = {
     "language_chooser": True,
 }
+
+CORS_ALLOW_CREDENTIALS = True
+SESSION_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SECURE = True
