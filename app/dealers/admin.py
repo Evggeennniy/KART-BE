@@ -11,10 +11,10 @@ class DealerAdmin(admin.ModelAdmin):
     ordering = ('country',)
 
     fieldsets = (
-        (_("Основное"), {
+        (None, {
             'fields': ('country', 'company_name', 'adress', 'image')
         }),
-        (_("Контактные данные"), {
+        (_("Contacts"), {
             'fields': ('email', 'website', 'whats_app', 'viber', 'instagram', 'facebook')
         }),
     )

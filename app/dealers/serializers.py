@@ -5,4 +5,15 @@ from dealers.models import Dealer
 class DealerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dealer
-        fields = "__all__"
+        fields = [
+            'image',
+            'country',
+            'company_name',
+            'adress',
+            'website',
+            'email',
+            'whats_app',
+            'viber',
+            'instagram',
+            'facebook'
+        ]
