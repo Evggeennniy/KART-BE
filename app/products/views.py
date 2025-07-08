@@ -10,7 +10,7 @@ class ProductListView(ListAPIView):
     serializer_class = ProductSerializer
 
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
-    filterset_fields = ['category', 'is_popular']
+    filterset_fields = ['category__slug', 'is_popular']
     ordering_fields = ['id', 'code', 'price', 'name', 'stock']
     search_fields = ['id', 'name', 'code']
 
