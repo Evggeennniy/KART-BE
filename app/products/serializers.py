@@ -35,13 +35,10 @@ class ProductSerializer(serializers.ModelSerializer):
             'category',
             'additional_recomendations',
             'slug'
-
         ]
         read_only_fields = fields
 
     @extend_schema_field(ProductShortSerializer(many=True))
     def get_additional_recomendations(self, obj):
         qs = obj.additional_recomendations.all()
-        if not qs:
-            return []
         return ProductShortSerializer(qs, many=True, context=self.context).data
