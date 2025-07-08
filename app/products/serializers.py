@@ -33,7 +33,9 @@ class ProductSerializer(serializers.ModelSerializer):
             'stock',
             'image',
             'category',
-            'additional_recomendations'
+            'additional_recomendations',
+            'slug'
+
         ]
         read_only_fields = fields
 
