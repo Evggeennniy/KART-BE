@@ -4,7 +4,7 @@ from posts.views import BlogPostListView, BlogPostDetailView, GalleryPhotoPostLi
 urlpatterns = [
     path('blog-posts/', BlogPostListView.as_view(), name='post-list'),
     path('blog-posts/<int:pk>/', BlogPostDetailView.as_view(), name='post-detail'),
-    path('gallery-posts/', GalleryPhotoPostListView.as_view(), name='gallery-post-list'),
-    path('gallery-posts/<int:pk>/', GalleryPhotoPostDetailView.as_view(), name='gallery-post-detail'),
+    path('gallery-photo-posts/', GalleryPhotoPostListView.as_view(), name='gallery-post-list'),
+    path('gallery-photo-posts/<int:pk>/', GalleryPhotoPostDetailView.as_view(), name='gallery-post-detail'),
 
 ]
