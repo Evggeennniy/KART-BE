@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
 
@@ -69,11 +68,11 @@ class Product(models.Model):
     )
     is_new = models.BooleanField(
         default=False,
-        verbose_name=_("New")
+        verbose_name=_("Is New")
     )
     is_popular = models.BooleanField(
         default=False,
-        verbose_name=_("Popular")
+        verbose_name=_("Is Popular")
     )
     category = models.ForeignKey(
         'Category',
