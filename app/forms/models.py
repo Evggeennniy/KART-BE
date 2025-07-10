@@ -20,7 +20,7 @@ class ApplicationForm(models.Model):
 class DealerApplicationForm(models.Model):
     company_name = models.CharField(max_length=64, verbose_name=_("Company"))
     address = models.CharField(max_length=255, verbose_name=_("Address"))
-    contact_person = models.CharField(max_length=64, verbose_name=_("Contact Person"))
+    full_name = models.CharField(max_length=64, verbose_name=_("Full Name"))
     position = models.CharField(max_length=255, verbose_name=_("Position"))
     phone = models.CharField(max_length=50, verbose_name=_("Phone"))
     email = models.EmailField(verbose_name=_("Email"))

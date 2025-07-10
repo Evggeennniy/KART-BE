@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-10 15:51+0300\n"
+"POT-Creation-Date: 2025-07-10 16:37+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,9 +56,9 @@ msgstr "Компания"
 msgid "Address"
 msgstr "Адрес"
 
-#: .\forms\models.py:23
-msgid "Contact Person"
-msgstr "Контактное лицо"
+#: .\forms\models.py:23 .\forms\models.py:58
+msgid "Full Name"
+msgstr "ФИО"
 
 #: .\forms\models.py:24
 msgid "Position"
@@ -68,7 +68,7 @@ msgstr "Должность"
 msgid "Phone"
 msgstr "Телефон"
 
-#: .\forms\models.py:27 .\forms\models.py:65
+#: .\forms\models.py:27 .\forms\models.py:64
 msgid "Website"
 msgstr "Веб-сайт"
 
@@ -156,10 +156,6 @@ msgstr "Форма получения статуса дилера"
 msgid "Dealer Applications"
 msgstr "Формы получения статуса дилера"
 
-#: .\forms\models.py:58
-msgid "Full Name"
-msgstr "ФИО"
-
 #: .\forms\models.py:59
 msgid "Date of Birth"
 msgstr "Дата рождения"
@@ -172,7 +168,7 @@ msgstr "Город"
 msgid "Country Code"
 msgstr "Код страны"
 
-#: .\forms\models.py:64
+#: .\forms\models.py:65
 msgid "Social Media Links"
 msgstr "Ссылки на соцсети"
 
