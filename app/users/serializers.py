@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
-from users.models import User, Contact
-from drf_spectacular.utils import extend_schema_field
+from users.models import User
 
 
 User = get_user_model()
@@ -39,35 +38,3 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user
-
-
-class ContactSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Contact
-        fields = ['contact_type', 'value']
-
-
-class UserSerializer(serializers.ModelSerializer):
-    contacts = serializers.SerializerMethodField()
-
-    class Meta:
-        model = User
-        fields = [
-            'id',
-            'email',
-            'first_name',
-            'last_name',
-            'position',
-            'notes',
-            'country',
-            'city',
-            'is_instructor',
-            'is_master',
-            'is_active',
-            'contacts'
-        ]
-
-    @extend_schema_field(ContactSerializer(many=True))
-    def get_contacts(self, obj):
-        contacts = obj.contacts.all()
-        return ContactSerializer(contacts, many=True, context=self.context).data

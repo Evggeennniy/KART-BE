@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-25 12:50+0300\n"
+"POT-Creation-Date: 2025-07-09 22:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
-#: .\users\admin.py:11 .\users\models.py:90
-msgid "Contact"
-msgstr "Контакт"
-
-#: .\users\admin.py:12 .\users\models.py:91
-msgid "Contacts"
-msgstr "Контакты"
 
 #: .\users\admin.py:26
 msgid "Personal info"
@@ -68,7 +60,7 @@ msgstr "Статус инструктора"
 msgid "Master status"
 msgstr "Статус мастера"
 
-#: .\users\models.py:45 .\users\models.py:68
+#: .\users\models.py:45
 msgid "User"
 msgstr "Пользователь"
 
@@ -76,61 +68,53 @@ msgstr "Пользователь"
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\users\models.py:51
-msgid "Instagram"
-msgstr "Инстаграм"
+#~ msgid "Contact"
+#~ msgstr "Контакт"
 
-#: .\users\models.py:52
-msgid "Facebook"
-msgstr "Фейсбук"
+#~ msgid "Contacts"
+#~ msgstr "Контакты"
 
-#: .\users\models.py:53
-msgid "TikTok"
-msgstr "ТикТок"
+#~ msgid "Instagram"
+#~ msgstr "Инстаграм"
 
-#: .\users\models.py:54
-msgid "Telegram"
-msgstr "Телеграм"
+#~ msgid "Facebook"
+#~ msgstr "Фейсбук"
 
-#: .\users\models.py:55
-msgid "WhatsApp"
-msgstr "Ватсап"
+#~ msgid "TikTok"
+#~ msgstr "ТикТок"
 
-#: .\users\models.py:56
-msgid "Viber"
-msgstr "Вайбер"
+#~ msgid "Telegram"
+#~ msgstr "Телеграм"
 
-#: .\users\models.py:57
-msgid "LinkedIn"
-msgstr "Линкедин"
+#~ msgid "WhatsApp"
+#~ msgstr "Ватсап"
 
-#: .\users\models.py:58
-msgid "YouTube"
-msgstr "Ютуб"
+#~ msgid "Viber"
+#~ msgstr "Вайбер"
 
-#: .\users\models.py:59
-msgid "Snapchat"
-msgstr "Снапчат"
+#~ msgid "LinkedIn"
+#~ msgstr "Линкедин"
 
-#: .\users\models.py:60
-msgid "Twitter"
-msgstr "Твиттер"
+#~ msgid "YouTube"
+#~ msgstr "Ютуб"
 
-#: .\users\models.py:61
-msgid "Other"
-msgstr "Другое"
+#~ msgid "Snapchat"
+#~ msgstr "Снапчат"
 
-#: .\users\models.py:73
-msgid "Contact type"
-msgstr "Тип контакта"
+#~ msgid "Twitter"
+#~ msgstr "Твиттер"
 
-#: .\users\models.py:77
-msgid "Value"
-msgstr "Значение"
+#~ msgid "Other"
+#~ msgstr "Другое"
 
-#: .\users\models.py:83
-msgid "Note"
-msgstr "Заметка"
+#~ msgid "Contact type"
+#~ msgstr "Тип контакта"
+
+#~ msgid "Value"
+#~ msgstr "Значение"
+
+#~ msgid "Note"
+#~ msgstr "Заметка"
 
 #~ msgid "Phone number"
 #~ msgstr "Номер телефона"

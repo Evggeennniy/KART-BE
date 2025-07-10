@@ -1,21 +1,21 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
-from users.models import User, Contact
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from users.models import User
 from django.utils.translation import gettext_lazy as _
 
 
-class ContactInline(admin.TabularInline):
-    model = Contact
-    extra = 1
-    fields = ('contact_type', 'value', 'note')
-    verbose_name = _("Contact")
-    verbose_name_plural = _("Contacts")
+# class ContactInline(admin.TabularInline):
+#     model = Contact
+#     extra = 1
+#     fields = ('contact_type', 'value', 'note')
+#     verbose_name = _("Contact")
+#     verbose_name_plural = _("Contacts")
 
 
 @admin.register(User)
-class UserAdmin(UserAdmin):
+class UserAdmin(BaseUserAdmin):
     model = User
-    inlines = [ContactInline]
+    # inlines = [ContactInline]
     ordering = ['email',]
 
     list_display = ('email', 'is_instructor', 'is_master', 'is_staff', 'is_superuser')
@@ -44,4 +44,23 @@ class UserAdmin(UserAdmin):
             'user_permissions',
         )}),
         (_("Important dates"), {'fields': ('last_login', 'date_joined')}),
+    )
+
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': (
+                'email',
+                'first_name',
+                'last_name',
+                'country',
+                'password1',
+                'password2',
+                'is_active',
+                'is_instructor',
+                'is_master',
+                'is_staff',
+                'is_superuser',
+            ),
+        }),
     )
