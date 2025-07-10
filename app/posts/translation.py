@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from posts.models import BlogPost, GalleryPost
+from posts.models import BlogPost, GalleryPhotoPost
 
 
 @register(BlogPost)
@@ -9,7 +9,7 @@ class BlogPostTranslationOptions(TranslationOptions):
     )
 
 
-@register(GalleryPost)
+@register(GalleryPhotoPost)
 class GalleryPostTranslationOptions(TranslationOptions):
     fields = (
         'title',

@@ -19,13 +19,13 @@ class BlogPost(models.Model):
     )
 
     class Meta:
-        verbose_name = _("Post")
-        verbose_name_plural = _("Posts")
+        verbose_name = _("Blog post")
+        verbose_name_plural = _("Blogs posts")
 
 
-class GalleryPost(models.Model):
+class GalleryPhotoPost(models.Model):
     image = models.ImageField(
-        upload_to='gallery/',
+        upload_to='gallery/photos/',
         blank=True,
         null=True,
         verbose_name=_("Image")
@@ -35,7 +35,6 @@ class GalleryPost(models.Model):
         verbose_name=_("Title")
     )
     datetime = models.DateTimeField(
-        auto_now_add=True,
         verbose_name=_("Date and Time")
     )
 

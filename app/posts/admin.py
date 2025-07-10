@@ -1,17 +1,19 @@
 from django.contrib import admin
-from posts.models import BlogPost
+from posts.models import BlogPost, GalleryPhotoPost
 from django.utils.translation import gettext_lazy as _
 
 
 @admin.register(BlogPost)
 class BlogPostAdmin(admin.ModelAdmin):
     list_display = ('title', 'link')
+    search_fields = ('title', 'link')
+
+    exclude = ('title',)
+
+
+@admin.register(GalleryPhotoPost)
+class GalleryPhotoPostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'datetime')
     search_fields = ('title',)
 
-    exclude = ()
-
-    fieldsets = (
-        (None, {
-            'fields': ('title', 'link', 'preview_image'),
-        }),
-    )
+    exclude = ('title',)
