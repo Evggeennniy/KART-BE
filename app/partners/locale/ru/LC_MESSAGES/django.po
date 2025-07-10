@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-09 23:14+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\partners\admin.py:18 .\partners\models.py:193
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\partners\admin.py:26 .\partners\models.py:62
+msgid "Dealer"
+msgstr "Дилер"
+
+#: .\partners\admin.py:27 .\partners\models.py:63
+msgid "Dealers"
+msgstr "Дилеры"
+
+#: .\partners\models.py:11 .\partners\models.py:69 .\partners\models.py:118
+msgid "Image"
+msgstr "Изображение"
+
+#: .\partners\models.py:16 .\partners\models.py:84 .\partners\models.py:133
+msgid "Country"
+msgstr "Страна"
+
+#: .\partners\models.py:21
+msgid "Company"
+msgstr "Компания"
+
+#: .\partners\models.py:25
+msgid "Address"
+msgstr "Адрес"
+
+#: .\partners\models.py:30
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: .\partners\models.py:35 .\partners\models.py:98 .\partners\models.py:147
+msgid "Email"
+msgstr "Ел. почта"
+
+#: .\partners\models.py:40 .\partners\models.py:170
+msgid "WhatsApp"
+msgstr "Ватсап"
+
+#: .\partners\models.py:45 .\partners\models.py:171
+msgid "Viber"
+msgstr "Вайбер"
+
+#: .\partners\models.py:50 .\partners\models.py:166
+msgid "Instagram"
+msgstr "Инстаграм"
+
+#: .\partners\models.py:55 .\partners\models.py:167
+msgid "Facebook"
+msgstr "Фейсбук"
+
+#: .\partners\models.py:74 .\partners\models.py:123
+msgid "First Name"
+msgstr "Имя"
+
+#: .\partners\models.py:79 .\partners\models.py:128
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: .\partners\models.py:89 .\partners\models.py:138
+msgid "Position"
+msgstr "Должность"
+
+#: .\partners\models.py:93 .\partners\models.py:142
+msgid "Description"
+msgstr "Описание"
+
+#: .\partners\models.py:103 .\partners\models.py:152
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\partners\models.py:111
+msgid "Instructor"
+msgstr "Инструктор"
+
+#: .\partners\models.py:112
+msgid "Instructors"
+msgstr "Инструкторы"
+
+#: .\partners\models.py:160
+msgid "Master"
+msgstr "Мастер"
+
+#: .\partners\models.py:161
+msgid "Masters"
+msgstr "Мастера"
+
+#: .\partners\models.py:168
+msgid "TikTok"
+msgstr "TikTok"
+
+#: .\partners\models.py:169
+msgid "Telegram"
+msgstr "Telegram"
+
+#: .\partners\models.py:172
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: .\partners\models.py:173
+msgid "YouTube"
+msgstr "YouTube"
+
+#: .\partners\models.py:174
+msgid "Snapchat"
+msgstr "Snapchat"
+
+#: .\partners\models.py:175
+msgid "Twitter"
+msgstr "Twitter"
+
+#: .\partners\models.py:176
+msgid "Other"
+msgstr "Другое"
+
+#: .\partners\models.py:184
+msgid "Contact type"
+msgstr "Тип контакта"
+
+#: .\partners\models.py:185
+msgid "Value"
+msgstr "Значение"
+
+#: .\partners\models.py:186
+msgid "Note"
+msgstr "Заметка"
+
+#: .\partners\models.py:192
+msgid "Contact"
+msgstr "Контакт"
+
+#~ msgid "Name"
+#~ msgstr "Название"
