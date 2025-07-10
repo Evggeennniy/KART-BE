@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-05 10:41+0300\n"
+"POT-Creation-Date: 2025-07-10 15:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,11 @@ msgstr ""
 msgid "Applicant Name"
 msgstr "Имя заявителя"
 
-#: .\forms\models.py:7 .\forms\models.py:39 .\forms\models.py:121
+#: .\forms\models.py:7 .\forms\models.py:26 .\forms\models.py:61
 msgid "Email"
 msgstr "Ел. Почта"
 
-#: .\forms\models.py:8 .\forms\models.py:123
+#: .\forms\models.py:8 .\forms\models.py:63
 msgid "Phone Number"
 msgstr "Номер"
 
@@ -36,298 +36,218 @@ msgstr "Номер"
 msgid "Message"
 msgstr "Сообщение"
 
-#: .\forms\models.py:10 .\forms\models.py:68
+#: .\forms\models.py:10 .\forms\models.py:47
 msgid "Submission Date"
 msgstr "Дата подачи"
 
 #: .\forms\models.py:16
 msgid "Application Form"
-msgstr "Анкета быстрого обращения"
+msgstr "Форма обращения"
 
 #: .\forms\models.py:17
 msgid "Application Forms"
-msgstr "Анкеты быстрого обращения"
+msgstr "Формы обращений"
 
-#: .\forms\models.py:22 .\forms\models.py:99
-msgid "Less than 1 year"
-msgstr "Менее 1 года"
-
-#: .\forms\models.py:23 .\forms\models.py:85
-msgid "1–3 years"
-msgstr "1–3 года"
-
-#: .\forms\models.py:24 .\forms\models.py:101
-msgid "3–5 years"
-msgstr "3–5 лет"
-
-#: .\forms\models.py:25 .\forms\models.py:102
-msgid "More than 5 years"
-msgstr "Более 5 лет"
-
-#: .\forms\models.py:29 .\forms\models.py:107 .\forms\models.py:113
-msgid "Yes"
-msgstr "Да"
-
-#: .\forms\models.py:30 .\forms\models.py:108 .\forms\models.py:114
-msgid "No"
-msgstr "Нет"
-
-#: .\forms\models.py:31
-msgid "In Progress"
-msgstr "В процессе"
-
-#: .\forms\models.py:34
+#: .\forms\models.py:21
 msgid "Company"
 msgstr "Компания"
 
-#: .\forms\models.py:35
+#: .\forms\models.py:22
 msgid "Address"
 msgstr "Адрес"
 
-#: .\forms\models.py:36
+#: .\forms\models.py:23
 msgid "Contact Person"
 msgstr "Контактное лицо"
 
-#: .\forms\models.py:37
+#: .\forms\models.py:24
 msgid "Position"
 msgstr "Должность"
 
-#: .\forms\models.py:38
+#: .\forms\models.py:25
 msgid "Phone"
 msgstr "Телефон"
 
-#: .\forms\models.py:40 .\forms\models.py:125
+#: .\forms\models.py:27 .\forms\models.py:65
 msgid "Website"
 msgstr "Веб-сайт"
 
-#: .\forms\models.py:41
+#: .\forms\models.py:28
 msgid "Instagram"
 msgstr "Инстаграм"
 
-#: .\forms\models.py:42
+#: .\forms\models.py:29
 msgid "Other Social Media"
 msgstr "Другие соцсети"
 
-#: .\forms\models.py:46 .\forms\models.py:136
+#: .\forms\models.py:30 .\forms\models.py:69
 msgid "Years of Experience"
 msgstr "Опыт работы (в годах)"
 
-#: .\forms\models.py:48
+#: .\forms\models.py:31
 msgid "Main Business Direction"
 msgstr "Основное направление бизнеса"
 
-#: .\forms\models.py:52
+#: .\forms\models.py:32
 msgid "License Status"
 msgstr "Наличие лицензии"
 
-#: .\forms\models.py:54
+#: .\forms\models.py:33
 msgid "Do You Train Masters?"
 msgstr "Обучаете ли мастеров?"
 
-#: .\forms\models.py:55
+#: .\forms\models.py:34
 msgid "Has Training Center"
 msgstr "Есть учебный центр"
 
-#: .\forms\models.py:56
+#: .\forms\models.py:35
 msgid "Seats in Training Room"
 msgstr "Мест в учебном классе"
 
-#: .\forms\models.py:57
+#: .\forms\models.py:36
 msgid "Certified Trainers"
 msgstr "Сертифицированные тренеры"
 
-#: .\forms\models.py:58
+#: .\forms\models.py:37
 msgid "Physical Location / Showroom"
 msgstr "Физический адрес / шоурум"
 
-#: .\forms\models.py:59
+#: .\forms\models.py:38
 msgid "Product Distribution Method"
 msgstr "Метод дистрибуции продукции"
 
-#: .\forms\models.py:60
+#: .\forms\models.py:39
 msgid "Storage & Logistics Capability"
 msgstr "Наличие склада / логистических возможностей"
 
-#: .\forms\models.py:61
+#: .\forms\models.py:40
 msgid "Marketing Channels"
 msgstr "Каналы продвижения"
 
-#: .\forms\models.py:62
+#: .\forms\models.py:41
 msgid "Willing to Use KART Marketing Materials"
 msgstr "Готовы использовать маркетинг KART"
 
-#: .\forms\models.py:63
+#: .\forms\models.py:42
 msgid "Active Client Base (Approx.)"
 msgstr "Активная клиентская база (примерно)"
 
-#: .\forms\models.py:64
+#: .\forms\models.py:43
 msgid "Target Region for KART Sales"
 msgstr "Целевой регион продаж KART"
 
-#: .\forms\models.py:65
+#: .\forms\models.py:44
 msgid "Currently Represented Brands"
 msgstr "Бренды, которые вы представляете"
 
-#: .\forms\models.py:66
+#: .\forms\models.py:45
 msgid "Reason for Cooperation with KART"
 msgstr "Причина сотрудничества с KART"
 
-#: .\forms\models.py:67 .\forms\models.py:167
+#: .\forms\models.py:46 .\forms\models.py:83
 msgid "Additional Comments"
 msgstr "Дополнительные комментарии"
 
-#: .\forms\models.py:71
+#: .\forms\models.py:50
 msgid "Dealer Application"
-msgstr "Анкета дистрибьютора"
+msgstr "Форма получения статуса дилера"
 
-#: .\forms\models.py:72
+#: .\forms\models.py:51
 msgid "Dealer Applications"
-msgstr "Анкеты дистрибьюторов"
+msgstr "Формы получения статуса дилера"
 
-#: .\forms\models.py:80
-msgid "Pedicure Master"
-msgstr "Мастер педикюра"
-
-#: .\forms\models.py:81
-msgid "Practicing Podologist"
-msgstr "Практикующий подолог"
-
-#: .\forms\models.py:86
-msgid "4–5 years"
-msgstr "4–5 лет"
-
-#: .\forms\models.py:87
-msgid "6–10 years"
-msgstr "6–10 лет"
-
-#: .\forms\models.py:88
-msgid "More than 10 years"
-msgstr "Более 10 лет"
-
-#: .\forms\models.py:92
-msgid "1–5 students"
-msgstr "1–5 студентов"
-
-#: .\forms\models.py:93
-msgid "6–10 students"
-msgstr "6–10 студентов"
-
-#: .\forms\models.py:94
-msgid "11–20 students"
-msgstr "11–20 студентов"
-
-#: .\forms\models.py:95
-msgid "More than 20"
-msgstr "Более 20"
-
-#: .\forms\models.py:100
-msgid "1–2 years"
-msgstr "1–2 года"
-
-#: .\forms\models.py:103
-msgid "Do not use"
-msgstr "Не использую"
-
-#: .\forms\models.py:109
-msgid "Can Rent if Needed"
-msgstr "Могу арендовать при необходимости"
-
-#: .\forms\models.py:115
-msgid "Partly"
-msgstr "Частично"
-
-#: .\forms\models.py:118
+#: .\forms\models.py:58
 msgid "Full Name"
 msgstr "ФИО"
 
-#: .\forms\models.py:119
+#: .\forms\models.py:59
 msgid "Date of Birth"
 msgstr "Дата рождения"
 
-#: .\forms\models.py:120
+#: .\forms\models.py:60
 msgid "City"
 msgstr "Город"
 
-#: .\forms\models.py:122
+#: .\forms\models.py:62
 msgid "Country Code"
 msgstr "Код страны"
 
-#: .\forms\models.py:124
+#: .\forms\models.py:64
 msgid "Social Media Links"
 msgstr "Ссылки на соцсети"
 
-#: .\forms\models.py:129
+#: .\forms\models.py:66
 msgid "Your Role"
 msgstr "Ваша роль"
 
-#: .\forms\models.py:131
+#: .\forms\models.py:67
 msgid "Education Background"
 msgstr "Образование"
 
-#: .\forms\models.py:132
+#: .\forms\models.py:68
 msgid "Medical Education"
 msgstr "Медицинское образование"
 
-#: .\forms\models.py:138
+#: .\forms\models.py:70
 msgid "Current Job & Position"
 msgstr "Текущая работа и должность"
 
-#: .\forms\models.py:139
+#: .\forms\models.py:71
 msgid "Pedicure Techniques You Use"
 msgstr "Используемые техники педикюра"
 
-#: .\forms\models.py:140
+#: .\forms\models.py:72
 msgid "Teaching Experience"
 msgstr "Преподавательский опыт"
 
-#: .\forms\models.py:141
+#: .\forms\models.py:73
 msgid "Course Topics Description"
 msgstr "Описание тем курсов"
 
-#: .\forms\models.py:145
+#: .\forms\models.py:74
 msgid "Training Place Availability"
 msgstr "Наличие учебной площадки"
 
-#: .\forms\models.py:150
+#: .\forms\models.py:75
 msgid "Students per Month"
 msgstr "Количество студентов в месяц"
 
-#: .\forms\models.py:155
+#: .\forms\models.py:76
 msgid "Familiar with KART"
 msgstr "Знакомы с продукцией KART?"
 
-#: .\forms\models.py:160
+#: .\forms\models.py:77
 msgid "KART Usage Period"
 msgstr "Стаж использования KART"
 
-#: .\forms\models.py:162
+#: .\forms\models.py:78
 msgid "Your Strengths as a Trainer"
 msgstr "Ваши сильные стороны как преподавателя"
 
-#: .\forms\models.py:163
+#: .\forms\models.py:79
 msgid "Audience Experience (Offline/Online)"
 msgstr "Опыт взаимодействия с аудиторией (офлайн/онлайн)"
 
-#: .\forms\models.py:164
+#: .\forms\models.py:80
 msgid "Promotion Platforms/Channels"
 msgstr "Платформы и каналы продвижения"
 
-#: .\forms\models.py:165
+#: .\forms\models.py:81
 msgid "Why You Want to Become a KART Instructor"
 msgstr "Почему вы хотите стать инструктором KART"
 
-#: .\forms\models.py:166
+#: .\forms\models.py:82
 msgid "Ready to Join Instructor Program"
 msgstr "Готовы присоединиться к программе инструкторов"
 
-#: .\forms\models.py:168
+#: .\forms\models.py:84
 msgid "Submitted At"
 msgstr "Дата подачи"
 
-#: .\forms\models.py:171
+#: .\forms\models.py:87
 msgid "Instructor Application"
-msgstr "Анкета преподавателя"
+msgstr "Форма получения статуса инструктора"
 
-#: .\forms\models.py:172
+#: .\forms\models.py:88
 msgid "Instructor Applications"
-msgstr "Анкеты преподавателей"
+msgstr "Формы получения статуса инструктора"
