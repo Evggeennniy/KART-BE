@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 
     "users",
     "products",
-    "dealers",
+    "partners",
     "posts",
     "forms",
     "info"
