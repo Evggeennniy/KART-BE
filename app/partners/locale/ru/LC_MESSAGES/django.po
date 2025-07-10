@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 23:14+0300\n"
+"POT-Creation-Date: 2025-07-10 15:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,15 +20,11 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\partners\admin.py:18 .\partners\models.py:193
-msgid "Contacts"
-msgstr "Контакты"
-
-#: .\partners\admin.py:26 .\partners\models.py:62
+#: .\partners\admin.py:16 .\partners\models.py:62
 msgid "Dealer"
 msgstr "Дилер"
 
-#: .\partners\admin.py:27 .\partners\models.py:63
+#: .\partners\admin.py:17 .\partners\models.py:63
 msgid "Dealers"
 msgstr "Дилеры"
 
@@ -151,6 +147,10 @@ msgstr "Заметка"
 #: .\partners\models.py:192
 msgid "Contact"
 msgstr "Контакт"
+
+#: .\partners\models.py:193
+msgid "Contacts"
+msgstr "Контакты"
 
 #~ msgid "Name"
 #~ msgstr "Название"
