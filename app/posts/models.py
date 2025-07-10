@@ -39,5 +39,25 @@ class GalleryPhotoPost(models.Model):
     )
 
     class Meta:
-        verbose_name = _("Gallery Post")
-        verbose_name_plural = _("Gallery Posts")
+        verbose_name = _("Gallery Photo Post")
+        verbose_name_plural = _("Gallery Photo Posts")
+
+
+class GalleryVideoPost(models.Model):
+    video = models.FileField(
+        upload_to='gallery/photos/',
+        blank=True,
+        null=True,
+        verbose_name=_("Image")
+    )
+    title = models.CharField(
+        max_length=64,
+        verbose_name=_("Title")
+    )
+    datetime = models.DateTimeField(
+        verbose_name=_("Date and Time")
+    )
+
+    class Meta:
+        verbose_name = _("Gallery Video Post")
+        verbose_name_plural = _("Gallery Video Posts")

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from posts.models import BlogPost, GalleryPhotoPost
+from posts.models import BlogPost, GalleryPhotoPost, GalleryVideoPost
 from django.utils.translation import gettext_lazy as _
 
 
@@ -13,6 +13,14 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 @admin.register(GalleryPhotoPost)
 class GalleryPhotoPostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'datetime')
+    search_fields = ('title',)
+
+    exclude = ('title',)
+
+
+@admin.register(GalleryVideoPost)
+class GalleryVideoPostAdmin(admin.ModelAdmin):
     list_display = ('title', 'datetime')
     search_fields = ('title',)
 
