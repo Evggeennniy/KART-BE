@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     "partners",
     "posts",
     "forms",
-    "info"
+    "info",
+    'orders'
 ]
 
 MIDDLEWARE = [

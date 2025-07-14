@@ -9,7 +9,9 @@ class UserAdmin(BaseUserAdmin):
     model = User
     ordering = ['email',]
 
-    list_display = ('email', 'is_instructor', 'is_master', 'is_staff', 'is_superuser')
+    readonly_fields = ('uuid',)
+
+    list_display = ('email', 'uuid',  'is_instructor', 'is_master', 'is_staff', 'is_superuser')
     list_filter = ('is_active', 'is_master', 'is_staff')
 
     fieldsets = (

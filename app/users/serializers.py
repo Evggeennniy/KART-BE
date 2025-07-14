@@ -71,3 +71,6 @@ class UserDeliveryDetailsSerializer(serializers.ModelSerializer):
             'delivery_phone_number',
             'eori_number',
         ]
+class ChangePasswordSerializer(serializers.Serializer):
+    uuid = serializers.UUIDField()
+    new_password = serializers.CharField(write_only=True, min_length=8, max_length=128)

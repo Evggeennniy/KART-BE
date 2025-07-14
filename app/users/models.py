@@ -1,3 +1,4 @@
+import uuid
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -29,6 +30,8 @@ class CustomUserManager(BaseUserManager):
 class User(AbstractUser):
     username = None
     email = models.EmailField(unique=True, verbose_name=_("Email address"))
+
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False, null=True, blank=True)
 
     position = models.CharField(max_length=64, blank=True, null=False, default="", verbose_name=_("Position"))
     notes = models.TextField(blank=True, null=False, default="", verbose_name=_("Notes"))
