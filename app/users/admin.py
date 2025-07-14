@@ -4,18 +4,9 @@ from users.models import User
 from django.utils.translation import gettext_lazy as _
 
 
-# class ContactInline(admin.TabularInline):
-#     model = Contact
-#     extra = 1
-#     fields = ('contact_type', 'value', 'note')
-#     verbose_name = _("Contact")
-#     verbose_name_plural = _("Contacts")
-
-
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
     model = User
-    # inlines = [ContactInline]
     ordering = ['email',]
 
     list_display = ('email', 'is_instructor', 'is_master', 'is_staff', 'is_superuser')
@@ -23,26 +14,48 @@ class UserAdmin(BaseUserAdmin):
 
     fieldsets = (
         (None, {'fields': ('password',)}),
+
         (_("Personal info"), {
             'fields': (
                 'first_name',
                 'last_name',
+                'display_name',
+                'country_code',
+                'phone_number',
                 'email',
-                'position',
-                'country',
-                'city',
-                'notes',
             )
         }),
-        (_("Permissions"), {'fields': (
-            'is_active',
-            'is_instructor',
-            'is_master',
-            'is_staff',
-            'is_superuser',
-            'groups',
-            'user_permissions',
-        )}),
+
+        (_("Delivery info"), {
+            'fields': (
+                'delivery_first_name',
+                'delivery_last_name',
+                'company_name',
+                'id_or_vat_number',
+                'delivery_country_region',
+                'delivery_city',
+                'delivery_street_address',
+                'delivery_aprt_number',
+                'delivery_postal_code',
+                'delivery_email',
+                'delivery_country_code',
+                'delivery_phone_number',
+                'eori_number',
+            )
+        }),
+
+        (_("Permissions"), {
+            'fields': (
+                'is_active',
+                'is_instructor',
+                'is_master',
+                'is_staff',
+                'is_superuser',
+                'groups',
+                'user_permissions',
+            )
+        }),
+
         (_("Important dates"), {'fields': ('last_login', 'date_joined')}),
     )
 

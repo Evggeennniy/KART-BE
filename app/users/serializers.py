@@ -38,3 +38,36 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user
+
+
+class UserPersonalDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            'first_name',
+            'last_name',
+            'display_name',
+            'country_code',
+            'phone_number',
+            'email',
+        ]
+
+
+class UserDeliveryDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            'delivery_first_name',
+            'delivery_last_name',
+            'company_name',
+            'id_or_vat_number',
+            'delivery_country_region',
+            'delivery_city',
+            'delivery_street_address',
+            'delivery_aprt_number',
+            'delivery_postal_code',
+            'delivery_country_code',
+            'delivery_email',
+            'delivery_phone_number',
+            'eori_number',
+        ]
