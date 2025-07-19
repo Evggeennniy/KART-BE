@@ -7,8 +7,13 @@ from users.serializers import ( RegisterSerializer,
                                 UserDeliveryDetailsSerializer,
                                 ChangePasswordSerializer )
 from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiResponse
+from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 from users.models import User
+from django.views import View
+from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.conf import settings
 
 @extend_schema(
     request=RegisterSerializer,
@@ -156,3 +161,39 @@ class ChangePasswordView(APIView):
             return Response({"detail": "Password changed successfully"}, status=status.HTTP_200_OK)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class TestEmailView(View):
+    def get(self, request):
+        send_mail(
+            subject='Письмо',
+            message='Готово!',
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[settings.EMAIL_HOST_USER],
+            fail_silently=False,
+        )
+        return HttpResponse(f'Письмо отправлено на {settings.EMAIL_HOST_USER}')
+
+
+@extend_schema(
+    responses={
+        200: OpenApiResponse(description="User activated successfully"),
+        400: OpenApiResponse(description="User already active"),
+        404: OpenApiResponse(description="User not found"),
+    }
+)
+class ActivateUserView(APIView):
+    def get(self, request, code):
+        try:
+            activation_uuid = uuid.UUID(str(code))
+        except ValueError:
+            return Response({"detail": "Invalid activation code format."}, status=status.HTTP_400_BAD_REQUEST)
+
+        user = get_object_or_404(User, activation_code=activation_uuid)
+
+        if user.active:
+            return Response({"detail": "User already active."}, status=status.HTTP_400_BAD_REQUEST)
+
+        user.active = True
+        user.save()
+        return Response({"detail": "User activated successfully."}, status=status.HTTP_200_OK)

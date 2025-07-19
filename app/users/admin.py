@@ -11,7 +11,7 @@ class UserAdmin(BaseUserAdmin):
 
     readonly_fields = ('uuid',)
 
-    list_display = ('email', 'uuid',  'is_instructor', 'is_master', 'is_staff', 'is_superuser')
+    list_display = ('email', 'uuid', 'is_master', 'is_staff', 'is_superuser')
     list_filter = ('is_active', 'is_master', 'is_staff')
 
     fieldsets = (
@@ -49,7 +49,6 @@ class UserAdmin(BaseUserAdmin):
         (_("Permissions"), {
             'fields': (
                 'is_active',
-                'is_instructor',
                 'is_master',
                 'is_staff',
                 'is_superuser',
@@ -72,7 +71,6 @@ class UserAdmin(BaseUserAdmin):
                 'password1',
                 'password2',
                 'is_active',
-                'is_instructor',
                 'is_master',
                 'is_staff',
                 'is_superuser',

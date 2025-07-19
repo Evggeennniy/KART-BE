@@ -13,6 +13,9 @@ class Category(models.Model):
         verbose_name=_("Slug")
     )
 
+    only_for_masters = models.BooleanField(default=False, verbose_name="Only for masters")
+    cover_default_price = models.BooleanField(default=False, verbose_name="Cover default price")
+
     def __str__(self):
         return self.name
 
@@ -26,17 +29,42 @@ class Product(models.Model):
         max_length=20,
         unique=True,
         verbose_name=_("Code"),
-        editable=False
+        blank=False,
+        null=False
     )
     slug = models.SlugField(
         unique=True,
         verbose_name=_("Slug")
     )
-    image = models.ImageField(
+    image1 = models.ImageField(
         upload_to='products/',
         blank=True,
         null=True,
-        verbose_name=_("Image")
+        verbose_name=_("Image 1")
+    )
+    image2 = models.ImageField(
+        upload_to='products/',
+        blank=True,
+        null=True,
+        verbose_name=_("Image 2")
+    )
+    image3 = models.ImageField(
+        upload_to='products/',
+        blank=True,
+        null=True,
+        verbose_name=_("Image 3")
+    )
+    image4 = models.ImageField(
+        upload_to='products/',
+        blank=True,
+        null=True,
+        verbose_name=_("Image 4")
+    )
+    image5 = models.ImageField(
+        upload_to='products/',
+        blank=True,
+        null=True,
+        verbose_name=_("Image 5")
     )
     name = models.CharField(
         max_length=200,
@@ -92,10 +120,6 @@ class Product(models.Model):
         return f"{self.name} ({self.code})"
 
     def save(self, *args, **kwargs):
-        if not self.pk:
-            super().save(*args, **kwargs)
-            self.code = str(self.id + 999)
-            kwargs['force_update'] = True
         super().save(*args, **kwargs)
 
     class Meta:

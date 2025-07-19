@@ -175,3 +175,11 @@ REST_FRAMEWORK = {
 JAZZMIN_SETTINGS = {
     "language_chooser": True,
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'yourname@gmail.com'
+EMAIL_HOST_PASSWORD = 'yourpass'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

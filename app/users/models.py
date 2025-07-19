@@ -33,6 +33,9 @@ class User(AbstractUser):
 
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, null=True, blank=True)
 
+    activation_code = models.UUIDField(unique=True, editable=False, null=True, blank=True)
+    active = models.BooleanField(default=False)
+
     position = models.CharField(max_length=64, blank=True, null=False, default="", verbose_name=_("Position"))
     notes = models.TextField(blank=True, null=False, default="", verbose_name=_("Notes"))
     country = models.CharField(max_length=32, blank=True, null=False, default="", verbose_name=_("Country"))
@@ -65,13 +68,19 @@ class User(AbstractUser):
                                              default="", verbose_name=_("Delivery Phone Number"))
     eori_number = models.CharField(max_length=64, blank=True, null=False, default="", verbose_name=_("EORI Number"))
 
-    is_instructor = models.BooleanField(default=False, verbose_name=_("Instructor status"))
+
+    # is_instructor = models.BooleanField(default=False, verbose_name=_("Instructor status"))
     is_master = models.BooleanField(default=False, verbose_name=_("Master status"))
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['first_name', 'last_name', 'country']
 
     objects = CustomUserManager()
+
+    def save(self, *args, **kwargs):
+        if not self.activation_code:
+            self.activation_code = uuid.uuid4()
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = _("User")
