@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 22:28+0300\n"
+"POT-Creation-Date: 2025-07-22 16:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,67 +20,93 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\products\models.py:9 .\products\models.py:43
+#: .\products\models.py:9 .\products\models.py:71
 msgid "Name"
 msgstr "Название"
 
-#: .\products\models.py:13 .\products\models.py:33
+#: .\products\models.py:13 .\products\models.py:37
 msgid "Slug"
 msgstr "Слаг"
 
-#: .\products\models.py:20 .\products\models.py:81
+#: .\products\models.py:23 .\products\models.py:109
 msgid "Category"
 msgstr "Категория"
 
-#: .\products\models.py:21
+#: .\products\models.py:24
 msgid "Categories"
 msgstr "Категории"
 
-#: .\products\models.py:28
+#: .\products\models.py:31
 msgid "Code"
 msgstr "Код"
 
-#: .\products\models.py:39
-msgid "Image"
+#: .\products\models.py:43
+#, fuzzy
+#| msgid "Image"
+msgid "Image 1"
 msgstr "Изображение"
 
-#: .\products\models.py:48
+#: .\products\models.py:49
+#, fuzzy
+#| msgid "Image"
+msgid "Image 2"
+msgstr "Изображение"
+
+#: .\products\models.py:55
+#, fuzzy
+#| msgid "Image"
+msgid "Image 3"
+msgstr "Изображение"
+
+#: .\products\models.py:61
+#, fuzzy
+#| msgid "Image"
+msgid "Image 4"
+msgstr "Изображение"
+
+#: .\products\models.py:67
+#, fuzzy
+#| msgid "Image"
+msgid "Image 5"
+msgstr "Изображение"
+
+#: .\products\models.py:76
 msgid "Description"
 msgstr "Описание"
 
-#: .\products\models.py:53
+#: .\products\models.py:81
 msgid "How to Use"
 msgstr "Способ применения"
 
-#: .\products\models.py:58
+#: .\products\models.py:86
 msgid "Ingredients"
 msgstr "Ингридиенты"
 
-#: .\products\models.py:63
+#: .\products\models.py:91
 msgid "Price"
 msgstr "Цена"
 
-#: .\products\models.py:67
+#: .\products\models.py:95
 msgid "Stock"
 msgstr "Остаток"
 
-#: .\products\models.py:71
+#: .\products\models.py:99
 msgid "Is New"
 msgstr "Новый"
 
-#: .\products\models.py:75
+#: .\products\models.py:103
 msgid "Is Popular"
 msgstr "Популярный"
 
-#: .\products\models.py:88
+#: .\products\models.py:116
 msgid "Additional Recommendations"
 msgstr "Дополнительные рекомендации"
 
-#: .\products\models.py:102
+#: .\products\models.py:126
 msgid "Product"
 msgstr "Продукт"
 
-#: .\products\models.py:103
+#: .\products\models.py:127
 msgid "Products"
 msgstr "Продукты"
 

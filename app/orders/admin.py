@@ -1,29 +1,19 @@
 from django.contrib import admin
-from orders.models import OrderedObject, OrderList
-
-
-class OrderedObjectAdmin(admin.ModelAdmin):
-    list_display = ('product', 'quantity', 'sale_price', 'discounted_price')
-    list_filter = ('product',)
-    search_fields = ('product__name',)
-    autocomplete_fields = ('product',)
+from orders.models import OrderList, OrderedObject
 
 
 class OrderedObjectInline(admin.TabularInline):
-    model = OrderList.included.through
+    model = OrderedObject
     extra = 1
-    verbose_name = "Ordered Object"
-    verbose_name_plural = "Ordered Objects"
-    autocomplete_fields = ['orderedobject']
+    fields = ('product', 'quantity', 'sale_price', 'discounted_price')
+    autocomplete_fields = ['product']
 
 
 class OrderListAdmin(admin.ModelAdmin):
     list_display = ('id', 'payment_method', 'delivery_price', 'notes')
-    list_filter = ('payment_method',)
     search_fields = ('notes',)
+    list_filter = ('payment_method',)
     inlines = [OrderedObjectInline]
-    exclude = ('included',)
 
 
-admin.site.register(OrderedObject, OrderedObjectAdmin)
 admin.site.register(OrderList, OrderListAdmin)

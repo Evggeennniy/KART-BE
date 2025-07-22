@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ["*"]
 CORS_ALLOWED_ORIGINS = [
     "http://5.181.50.136",
     "http://localhost",
-
 ]
 
 CORS_ALLOW_CREDENTIALS = True
