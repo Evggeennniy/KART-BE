@@ -68,7 +68,9 @@ class ActualPricesView(APIView):
                 "id": product.id,
                 "title": product.name,
                 "price": int(product.price),
-                "image": product.image1.url if product.image1 else ""
+                "image": product.image1.url if product.image1 else "",
+                "slug": product.slug,
+
             })
 
         return Response(result, status=200)
