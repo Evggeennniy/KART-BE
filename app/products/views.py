@@ -9,6 +9,7 @@ from rest_framework import status
 from drf_spectacular.utils import extend_schema, OpenApiParameter
 from django.http import Http404
 
+
 class ProductListView(ListAPIView):
     queryset = Product.objects.select_related('category').all()
     serializer_class = ProductSerializer
@@ -34,6 +35,7 @@ class CategoryDetailView(RetrieveAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     lookup_field = 'slug'
+
 
 @extend_schema(
     parameters=[
@@ -66,7 +68,7 @@ class ActualPricesView(APIView):
                 "id": product.id,
                 "title": product.name,
                 "price": int(product.price),
-                "image": product.image.url if product.image else ""
+                "image": product.image1.url if product.image1 else ""
             })
 
         return Response(result, status=200)
