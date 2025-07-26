@@ -63,7 +63,8 @@ INSTALLED_APPS = [
     "posts",
     "forms",
     "info",
-    'orders'
+    'orders',
+    'discounts',
 ]
 
 MIDDLEWARE = [

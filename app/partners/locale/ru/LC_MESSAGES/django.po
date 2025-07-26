@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-10 15:51+0300\n"
+"POT-Creation-Date: 2025-07-26 19:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,135 +20,135 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\partners\admin.py:16 .\partners\models.py:62
+#: .\admin.py:16 .\models.py:62
 msgid "Dealer"
 msgstr "Дилер"
 
-#: .\partners\admin.py:17 .\partners\models.py:63
+#: .\admin.py:17 .\models.py:63
 msgid "Dealers"
 msgstr "Дилеры"
 
-#: .\partners\models.py:11 .\partners\models.py:69 .\partners\models.py:118
+#: .\models.py:11 .\models.py:69 .\models.py:118
 msgid "Image"
 msgstr "Изображение"
 
-#: .\partners\models.py:16 .\partners\models.py:84 .\partners\models.py:133
+#: .\models.py:16 .\models.py:84 .\models.py:133
 msgid "Country"
 msgstr "Страна"
 
-#: .\partners\models.py:21
+#: .\models.py:21
 msgid "Company"
 msgstr "Компания"
 
-#: .\partners\models.py:25
+#: .\models.py:25
 msgid "Address"
 msgstr "Адрес"
 
-#: .\partners\models.py:30
+#: .\models.py:30
 msgid "Website"
 msgstr "Веб-сайт"
 
-#: .\partners\models.py:35 .\partners\models.py:98 .\partners\models.py:147
+#: .\models.py:35 .\models.py:98 .\models.py:147
 msgid "Email"
 msgstr "Ел. почта"
 
-#: .\partners\models.py:40 .\partners\models.py:170
+#: .\models.py:40 .\models.py:170
 msgid "WhatsApp"
 msgstr "Ватсап"
 
-#: .\partners\models.py:45 .\partners\models.py:171
+#: .\models.py:45 .\models.py:171
 msgid "Viber"
 msgstr "Вайбер"
 
-#: .\partners\models.py:50 .\partners\models.py:166
+#: .\models.py:50 .\models.py:166
 msgid "Instagram"
 msgstr "Инстаграм"
 
-#: .\partners\models.py:55 .\partners\models.py:167
+#: .\models.py:55 .\models.py:167
 msgid "Facebook"
 msgstr "Фейсбук"
 
-#: .\partners\models.py:74 .\partners\models.py:123
+#: .\models.py:74 .\models.py:123
 msgid "First Name"
 msgstr "Имя"
 
-#: .\partners\models.py:79 .\partners\models.py:128
+#: .\models.py:79 .\models.py:128
 msgid "Last Name"
 msgstr "Фамилия"
 
-#: .\partners\models.py:89 .\partners\models.py:138
+#: .\models.py:89 .\models.py:138
 msgid "Position"
 msgstr "Должность"
 
-#: .\partners\models.py:93 .\partners\models.py:142
+#: .\models.py:93 .\models.py:142
 msgid "Description"
 msgstr "Описание"
 
-#: .\partners\models.py:103 .\partners\models.py:152
+#: .\models.py:103 .\models.py:152
 msgid "Phone"
 msgstr "Телефон"
 
-#: .\partners\models.py:111
+#: .\models.py:111
 msgid "Instructor"
 msgstr "Инструктор"
 
-#: .\partners\models.py:112
+#: .\models.py:112
 msgid "Instructors"
 msgstr "Инструкторы"
 
-#: .\partners\models.py:160
+#: .\models.py:160
 msgid "Master"
 msgstr "Мастер"
 
-#: .\partners\models.py:161
+#: .\models.py:161
 msgid "Masters"
 msgstr "Мастера"
 
-#: .\partners\models.py:168
+#: .\models.py:168
 msgid "TikTok"
 msgstr "TikTok"
 
-#: .\partners\models.py:169
+#: .\models.py:169
 msgid "Telegram"
 msgstr "Telegram"
 
-#: .\partners\models.py:172
+#: .\models.py:172
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: .\partners\models.py:173
+#: .\models.py:173
 msgid "YouTube"
 msgstr "YouTube"
 
-#: .\partners\models.py:174
+#: .\models.py:174
 msgid "Snapchat"
 msgstr "Snapchat"
 
-#: .\partners\models.py:175
+#: .\models.py:175
 msgid "Twitter"
 msgstr "Twitter"
 
-#: .\partners\models.py:176
+#: .\models.py:176
 msgid "Other"
 msgstr "Другое"
 
-#: .\partners\models.py:184
+#: .\models.py:184
 msgid "Contact type"
 msgstr "Тип контакта"
 
-#: .\partners\models.py:185
+#: .\models.py:185
 msgid "Value"
 msgstr "Значение"
 
-#: .\partners\models.py:186
+#: .\models.py:186
 msgid "Note"
 msgstr "Заметка"
 
-#: .\partners\models.py:192
+#: .\models.py:192
 msgid "Contact"
 msgstr "Контакт"
 
-#: .\partners\models.py:193
+#: .\models.py:193
 msgid "Contacts"
 msgstr "Контакты"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-05 10:37+0300\n"
+"POT-Creation-Date: 2025-07-26 19:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,18 +20,18 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\info\models.py:8
+#: .\models.py:8
 msgid "Question"
 msgstr "Вопрос"
 
-#: .\info\models.py:11
+#: .\models.py:11
 msgid "Answer"
 msgstr "Ответ"
 
-#: .\info\models.py:15
+#: .\models.py:15
 msgid "FAQ"
 msgstr "FAQ"
 
-#: .\info\models.py:16
+#: .\models.py:16
 msgid "FAQs"
 msgstr "FAQs"

@@ -19,6 +19,7 @@ class ProductShortSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     category = CategorySerializer(read_only=True)
     additional_recomendations = serializers.SerializerMethodField()
+    final_price = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
@@ -30,6 +31,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'ingredients',
             'code',
             'price',
+            'final_price',
             'stock',
             'image1',
             'image2',
@@ -41,6 +43,9 @@ class ProductSerializer(serializers.ModelSerializer):
             'slug'
         ]
         read_only_fields = fields
+
+    def get_final_price(self, obj):
+        return obj.get_final_price()
 
     @extend_schema_field(ProductShortSerializer(many=True))
     def get_additional_recomendations(self, obj):

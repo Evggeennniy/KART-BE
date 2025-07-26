@@ -1,20 +1,18 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from decimal import Decimal
 
 
 class Category(models.Model):
-    name = models.CharField(
-        max_length=32,
-        unique=True,
-        verbose_name=_("Name")
-    )
-    slug = models.SlugField(
-        unique=True,
-        verbose_name=_("Slug")
-    )
+    name = models.CharField(max_length=32, unique=True, verbose_name=_("Name"))
+    slug = models.SlugField(unique=True, verbose_name=_("Slug"))
 
-    only_for_masters = models.BooleanField(default=False, verbose_name=_("Only for masters"))
-    cover_default_price = models.BooleanField(default=False, verbose_name=_("Cover default price"))
+    only_for_masters = models.BooleanField(
+        default=False, verbose_name=_("Only for masters")
+    )
+    cover_default_price = models.BooleanField(
+        default=False, verbose_name=_("Cover default price")
+    )
 
     def __str__(self):
         return self.name
@@ -26,94 +24,46 @@ class Category(models.Model):
 
 class Product(models.Model):
     code = models.CharField(
-        max_length=20,
-        unique=True,
-        verbose_name=_("Code"),
-        blank=False,
-        null=False
+        max_length=20, unique=True, verbose_name=_("Code"), blank=False, null=False
     )
-    slug = models.SlugField(
-        unique=True,
-        verbose_name=_("Slug")
-    )
+    slug = models.SlugField(unique=True, verbose_name=_("Slug"))
     image1 = models.ImageField(
-        upload_to='products/',
-        blank=True,
-        null=True,
-        verbose_name=_("Image 1")
+        upload_to="products/", blank=True, null=True, verbose_name=_("Image 1")
     )
     image2 = models.ImageField(
-        upload_to='products/',
-        blank=True,
-        null=True,
-        verbose_name=_("Image 2")
+        upload_to="products/", blank=True, null=True, verbose_name=_("Image 2")
     )
     image3 = models.ImageField(
-        upload_to='products/',
-        blank=True,
-        null=True,
-        verbose_name=_("Image 3")
+        upload_to="products/", blank=True, null=True, verbose_name=_("Image 3")
     )
     image4 = models.ImageField(
-        upload_to='products/',
-        blank=True,
-        null=True,
-        verbose_name=_("Image 4")
+        upload_to="products/", blank=True, null=True, verbose_name=_("Image 4")
     )
     image5 = models.ImageField(
-        upload_to='products/',
-        blank=True,
-        null=True,
-        verbose_name=_("Image 5")
+        upload_to="products/", blank=True, null=True, verbose_name=_("Image 5")
     )
-    name = models.CharField(
-        max_length=200,
-        verbose_name=_("Name")
-    )
-    description = models.TextField(
-        blank=True,
-        null=True,
-        verbose_name=_("Description")
-    )
-    how_to_use = models.TextField(
-        blank=True,
-        null=True,
-        verbose_name=_("How to Use")
-    )
-    ingredients = models.TextField(
-        blank=True,
-        null=True,
-        verbose_name=_("Ingredients")
-    )
+    name = models.CharField(max_length=200, verbose_name=_("Name"))
+    description = models.TextField(blank=True, null=True, verbose_name=_("Description"))
+    how_to_use = models.TextField(blank=True, null=True, verbose_name=_("How to Use"))
+    ingredients = models.TextField(blank=True, null=True, verbose_name=_("Ingredients"))
     price = models.DecimalField(
-        max_digits=10,
-        decimal_places=2,
-        verbose_name=_("Price")
+        max_digits=10, decimal_places=2, verbose_name=_("Price")
     )
-    stock = models.PositiveIntegerField(
-        default=0,
-        verbose_name=_("Stock")
-    )
-    is_new = models.BooleanField(
-        default=False,
-        verbose_name=_("Is New")
-    )
-    is_popular = models.BooleanField(
-        default=False,
-        verbose_name=_("Is Popular")
-    )
+    stock = models.PositiveIntegerField(default=0, verbose_name=_("Stock"))
+    is_new = models.BooleanField(default=False, verbose_name=_("Is New"))
+    is_popular = models.BooleanField(default=False, verbose_name=_("Is Popular"))
     category = models.ForeignKey(
-        'Category',
-        related_name='products',
+        "Category",
+        related_name="products",
         on_delete=models.CASCADE,
-        verbose_name=_("Category")
+        verbose_name=_("Category"),
     )
     additional_recomendations = models.ManyToManyField(
-        'self',
+        "self",
         blank=True,
         symmetrical=False,
-        related_name='recommended_by',
-        verbose_name=_("Additional Recommendations")
+        related_name="recommended_by",
+        verbose_name=_("Additional Recommendations"),
     )
 
     def __str__(self):
@@ -125,3 +75,20 @@ class Product(models.Model):
     class Meta:
         verbose_name = _("Product")
         verbose_name_plural = _("Products")
+
+
+    def get_final_price(self):
+        price = self.price
+
+        product_discount = next((d for d in self.discounts.all() if d.is_valid()), None)
+        if product_discount:
+            return price * (Decimal("1.0") - product_discount.value / Decimal("100"))
+
+        category_discount = next(
+            (d for d in self.category.discounts.all() if d.is_valid()), None
+        )
+        if category_discount:
+            return price * (Decimal("1.0") - category_discount.value / Decimal("100"))
+
+        return price
+

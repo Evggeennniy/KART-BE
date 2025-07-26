@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-10 16:39+0300\n"
+"POT-Creation-Date: 2025-07-26 19:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,46 +20,46 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\posts\models.py:10
+#: .\models.py:10
 msgid "Preview Image"
 msgstr "Предпросмотр"
 
-#: .\posts\models.py:14 .\posts\models.py:35 .\posts\models.py:55
+#: .\models.py:14 .\models.py:35 .\models.py:55
 msgid "Title"
 msgstr "Заголовок"
 
-#: .\posts\models.py:18
+#: .\models.py:18
 msgid "Link"
 msgstr "Ссылка"
 
-#: .\posts\models.py:22
+#: .\models.py:22
 msgid "Blog post"
 msgstr "Публикация блога"
 
-#: .\posts\models.py:23
+#: .\models.py:23
 msgid "Blogs posts"
 msgstr "Публикации блога"
 
-#: .\posts\models.py:31 .\posts\models.py:51
+#: .\models.py:31 .\models.py:51
 msgid "Image"
 msgstr "Изображение"
 
-#: .\posts\models.py:38 .\posts\models.py:58
+#: .\models.py:38 .\models.py:58
 msgid "Date and Time"
 msgstr "Дата и Время"
 
-#: .\posts\models.py:42
+#: .\models.py:42
 msgid "Gallery Photo Post"
 msgstr "Фото галереи"
 
-#: .\posts\models.py:43
+#: .\models.py:43
 msgid "Gallery Photo Posts"
 msgstr "Фото галереи"
 
-#: .\posts\models.py:62
+#: .\models.py:62
 msgid "Gallery Video Post"
 msgstr "Видео галереи"
 
-#: .\posts\models.py:63
+#: .\models.py:63
 msgid "Gallery Video Posts"
 msgstr "Видео галереи"

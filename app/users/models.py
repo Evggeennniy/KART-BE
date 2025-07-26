@@ -81,7 +81,7 @@ class User(AbstractUser):
         blank=True,
         null=True,
         validators=[FileExtensionValidator(allowed_extensions=["pdf", "jpg", "jpeg", "png"])],
-        verbose_name=_("Certificate File")
+        verbose_name=_("Certificate")
     )
 
     # is_instructor = models.BooleanField(default=False, verbose_name=_("Instructor status"))
