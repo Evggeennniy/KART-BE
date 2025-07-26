@@ -177,6 +177,10 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
 
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True,  # Разделяет сериализаторы запроса и ответа, чтобы правильно поддерживать multipart/form-data с FileField
+}  
+
 JAZZMIN_SETTINGS = {
     "language_chooser": True,
 }

@@ -31,9 +31,8 @@ class CustomUserManager(BaseUserManager):
 class User(AbstractUser):
 
     ROLE_CHOICES = [
-        ("admin", "Admin"),
-        ("manager", "Manager"),
-        ("user", "User"),
+        ("private client", "Private Client"),
+        ("master", "Master"),
     ]
 
     username = None
@@ -76,8 +75,8 @@ class User(AbstractUser):
                                              default="", verbose_name=_("Delivery Phone Number"))
     eori_number = models.CharField(max_length=64, blank=True, null=False, default="", verbose_name=_("EORI Number"))
 
-    role = models.CharField(max_length=64, choices=ROLE_CHOICES, default="user", verbose_name=_("Role")) #here
-    certificate_file = models.FileField(
+    role = models.CharField(max_length=64, choices=ROLE_CHOICES, default="user", verbose_name=_("Role"))
+    certificate = models.FileField(
         upload_to="certificates/",
         blank=True,
         null=True,

@@ -12,6 +12,8 @@ class RegisterSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
     country = serializers.CharField(required=True)
+    role = serializers.CharField(required=True)
+    certificate = serializers.FileField(required=False, allow_null=True)
 
     class Meta:
         model = User
@@ -21,6 +23,8 @@ class RegisterSerializer(serializers.ModelSerializer):
             'last_name',
             'country',
             'password',
+            'role',
+            'certificate',
         ]
 
     def validate_email(self, value):
@@ -33,7 +37,9 @@ class RegisterSerializer(serializers.ModelSerializer):
             email=validated_data['email'],
             first_name=validated_data.get('first_name', ''),
             last_name=validated_data.get('last_name', ''),
-            country=validated_data.get('country', '')
+            country=validated_data.get('country', ''),
+            role=validated_data.get('role', ''),
+            certificate=validated_data.get('certificate')
         )
         user.set_password(validated_data['password'])
         user.save()
@@ -50,6 +56,8 @@ class UserPersonalDetailsSerializer(serializers.ModelSerializer):
             'country_code',
             'phone_number',
             'email',
+            'role',
+            'certificate',
         ]
 
 
