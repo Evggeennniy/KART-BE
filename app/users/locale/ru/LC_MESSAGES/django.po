@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-22 16:49+0300\n"
+"POT-Creation-Date: 2025-07-26 17:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,99 +36,107 @@ msgstr "Права"
 msgid "Important dates"
 msgstr "Важные даты"
 
-#: .\users\models.py:32
+#: .\users\models.py:39
 msgid "Email address"
 msgstr "Ел. почта"
 
-#: .\users\models.py:39
+#: .\users\models.py:46
 msgid "Position"
 msgstr "Должность"
 
-#: .\users\models.py:40
+#: .\users\models.py:47
 msgid "Notes"
 msgstr "Заметки"
 
-#: .\users\models.py:41
+#: .\users\models.py:48
 msgid "Country"
 msgstr "Страна"
 
-#: .\users\models.py:42
+#: .\users\models.py:49
 #, fuzzy
 #| msgid "Country"
 msgid "Country Code"
 msgstr "Страна"
 
-#: .\users\models.py:43
+#: .\users\models.py:50
 #, fuzzy
 #| msgid "Phone number"
 msgid "Phone Number"
 msgstr "Номер телефона"
 
-#: .\users\models.py:44 .\users\models.py:57
+#: .\users\models.py:51 .\users\models.py:64
 msgid "City / Locality"
 msgstr "Город / Населённый пункт"
 
-#: .\users\models.py:45
+#: .\users\models.py:52
 msgid "Display Name"
 msgstr "Отображаемое имя"
 
-#: .\users\models.py:48
+#: .\users\models.py:55
 msgid "Delivery Name"
 msgstr "Имя получателя"
 
-#: .\users\models.py:50
+#: .\users\models.py:57
 msgid "Delivery Last Name"
 msgstr "Фамилия получателя"
 
-#: .\users\models.py:51
+#: .\users\models.py:58
 msgid "Company Name"
 msgstr "Название компании"
 
-#: .\users\models.py:53
+#: .\users\models.py:60
 msgid "ID/VAT Number"
 msgstr "ИНН / НДС номер"
 
-#: .\users\models.py:55
+#: .\users\models.py:62
 msgid "Country/Region"
 msgstr "Страна / Регион"
 
-#: .\users\models.py:59
+#: .\users\models.py:66
 msgid "Street Address"
 msgstr "Улица, адрес"
 
-#: .\users\models.py:61
+#: .\users\models.py:68
 msgid "Apartment Number"
 msgstr "Номер квартиры"
 
-#: .\users\models.py:63
+#: .\users\models.py:70
 msgid "Postal Code"
 msgstr "Почтовый индекс"
 
-#: .\users\models.py:64
+#: .\users\models.py:71
 msgid "Delivery Email"
 msgstr "Email для доставки"
 
-#: .\users\models.py:66
+#: .\users\models.py:73
 msgid "Delivery Country Code"
 msgstr "Код страны доставки"
 
-#: .\users\models.py:68
+#: .\users\models.py:75
 msgid "Delivery Phone Number"
 msgstr "Телефон для доставки"
 
-#: .\users\models.py:69
+#: .\users\models.py:76
 msgid "EORI Number"
 msgstr "Номер EORI"
 
-#: .\users\models.py:73
+#: .\users\models.py:78
+msgid "Role"
+msgstr ""
+
+#: .\users\models.py:84
+msgid "Certificate File"
+msgstr ""
+
+#: .\users\models.py:88
 msgid "Master status"
 msgstr "Статус мастера"
 
-#: .\users\models.py:86
+#: .\users\models.py:101
 msgid "User"
 msgstr "Пользователь"
 
-#: .\users\models.py:87
+#: .\users\models.py:102
 msgid "Users"
 msgstr "Пользователи"
 

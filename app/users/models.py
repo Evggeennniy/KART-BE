@@ -75,7 +75,7 @@ class User(AbstractUser):
                                              default="", verbose_name=_("Delivery Phone Number"))
     eori_number = models.CharField(max_length=64, blank=True, null=False, default="", verbose_name=_("EORI Number"))
 
-    role = models.CharField(max_length=64, choices=ROLE_CHOICES, default="user", verbose_name=_("Role"))
+    role = models.CharField(max_length=64, choices=ROLE_CHOICES, default="private client", verbose_name=_("Role"))
     certificate = models.FileField(
         upload_to="certificates/",
         blank=True,

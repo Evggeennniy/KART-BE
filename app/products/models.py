@@ -13,8 +13,8 @@ class Category(models.Model):
         verbose_name=_("Slug")
     )
 
-    only_for_masters = models.BooleanField(default=False, verbose_name="Only for masters")
-    cover_default_price = models.BooleanField(default=False, verbose_name="Cover default price")
+    only_for_masters = models.BooleanField(default=False, verbose_name=_("Only for masters"))
+    cover_default_price = models.BooleanField(default=False, verbose_name=_("Cover default price"))
 
     def __str__(self):
         return self.name
