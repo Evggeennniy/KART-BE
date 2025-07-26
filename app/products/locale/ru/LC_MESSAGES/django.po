@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-22 16:49+0300\n"
+"POT-Creation-Date: 2025-07-26 17:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,14 @@ msgstr "Название"
 msgid "Slug"
 msgstr "Слаг"
 
+#: .\products\models.py:16
+msgid "Only for masters"
+msgstr "Только для мастеров"
+
+#: .\products\models.py:17
+msgid "Cover default price"
+msgstr "Цена покрытия по умолчанию"
+
 #: .\products\models.py:23 .\products\models.py:109
 msgid "Category"
 msgstr "Категория"
@@ -44,31 +52,31 @@ msgstr "Код"
 #, fuzzy
 #| msgid "Image"
 msgid "Image 1"
-msgstr "Изображение"
+msgstr "Изображение 1"
 
 #: .\products\models.py:49
 #, fuzzy
 #| msgid "Image"
 msgid "Image 2"
-msgstr "Изображение"
+msgstr "Изображение 2"
 
 #: .\products\models.py:55
 #, fuzzy
 #| msgid "Image"
 msgid "Image 3"
-msgstr "Изображение"
+msgstr "Изображение 3"
 
 #: .\products\models.py:61
 #, fuzzy
 #| msgid "Image"
 msgid "Image 4"
-msgstr "Изображение"
+msgstr "Изображение 4"
 
 #: .\products\models.py:67
 #, fuzzy
 #| msgid "Image"
 msgid "Image 5"
-msgstr "Изображение"
+msgstr "Изображение 5"
 
 #: .\products\models.py:76
 msgid "Description"

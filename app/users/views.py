@@ -1,6 +1,7 @@
 import uuid
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import status
 from users.serializers import ( RegisterSerializer,
                                 UserPersonalDetailsSerializer,
@@ -20,6 +21,8 @@ from django.conf import settings
     responses={201: None, 400: None}
 )
 class RegisterView(APIView):
+    parser_classes = [MultiPartParser, FormParser] #For uploading file
+
     def post(self, request):
         serializer = RegisterSerializer(data=request.data)
         if serializer.is_valid():

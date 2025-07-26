@@ -25,6 +25,8 @@ class UserAdmin(BaseUserAdmin):
                 'country_code',
                 'phone_number',
                 'email',
+                'role', 
+                'certificate',
             )
         }),
 
@@ -70,6 +72,8 @@ class UserAdmin(BaseUserAdmin):
                 'country',
                 'password1',
                 'password2',
+                'role', 
+                'certificate',
                 'is_active',
                 'is_master',
                 'is_staff',
