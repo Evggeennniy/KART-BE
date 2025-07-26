@@ -2,6 +2,7 @@ import uuid
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.core.validators import FileExtensionValidator
 
 
 class CustomUserManager(BaseUserManager):
@@ -28,6 +29,13 @@ class CustomUserManager(BaseUserManager):
 
 
 class User(AbstractUser):
+
+    ROLE_CHOICES = [
+        ("admin", "Admin"),
+        ("manager", "Manager"),
+        ("user", "User"),
+    ]
+
     username = None
     email = models.EmailField(unique=True, verbose_name=_("Email address"))
 
@@ -68,6 +76,14 @@ class User(AbstractUser):
                                              default="", verbose_name=_("Delivery Phone Number"))
     eori_number = models.CharField(max_length=64, blank=True, null=False, default="", verbose_name=_("EORI Number"))
 
+    role = models.CharField(max_length=64, choices=ROLE_CHOICES, default="user", verbose_name=_("Role")) #here
+    certificate_file = models.FileField(
+        upload_to="certificates/",
+        blank=True,
+        null=True,
+        validators=[FileExtensionValidator(allowed_extensions=["pdf", "jpg", "jpeg", "png"])],
+        verbose_name=_("Certificate File")
+    )
 
     # is_instructor = models.BooleanField(default=False, verbose_name=_("Instructor status"))
     is_master = models.BooleanField(default=False, verbose_name=_("Master status"))
